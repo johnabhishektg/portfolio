@@ -1,0 +1,326 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-blue: #101729;
+    --primary-text: #fff;
+    --coral:coral;
+}
+section{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-blue);
+    transition: all 0.25s;
+    color: var(--primary-text);
+    margin: 0;
+    
+}
+ nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0 35px 0 0;
+    padding: 0;
+}
+
+li{
+    text-decoration: none;
+    padding: 20px;
+} 
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+a:hover{
+    color: var(--coral);
+    transition: 0.25s;
+}
+
+.title{
+    align-items: center;
+    text-align: center;
+}
+
+/* hero section */
+
+.hero-intro{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.hero-text{
+    margin: 10rem 0 0 7rem;
+}
+
+h1,p{
+    margin:0;
+}
+
+/* title */
+
+h1{
+    font-size: 6.5rem;
+}
+/* below title */
+.text-blw{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.button{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 15px;
+    background-color: var(--coral);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* socials */
+
+.socials{
+    margin: 14rem 3rem 0 0;
+    color: var(--primary-text);
+}
+.icon{
+    padding: 0 10px;
+ }
+
+/* 
+.icon:hover{
+   background-color: var(--coral);
+   border-radius: 5px;
+   transition: .15s ;
+} */
+
+/* about me */
+
+.about-me{
+    display: flex;
+    justify-content: space-between;      
+    background-color: #fff;
+    height: 500px;
+    padding: 7% 3% 5%;
+    
+}
+.abt-me{
+    padding: 30px;
+}
+
+h2{
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+p.about-me-txt{
+    font-size: 1.5rem;
+    margin-right: 60px;
+}
+
+
+.profile-pic{
+    width: 300px;
+    border-radius: 50%;
+}
+
+
+/* Projects */
+
+.projects{
+    padding: 3% 5% 5%;
+    text-align: center;
+}
+
+.project-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card{
+    width: 300px;
+    height: 500px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+h3{
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.project-img{
+    /* height: 30%; */
+    width: 70%;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.project-text{
+    font-size: 20px;
+    margin: 15px 10px;
+}
+
+.view-here{
+    font-size: 15px;
+}
+
+/* Contact Me */
+
+footer{
+    background-color: #101729;
+    color: var(--primary-text);
+    padding: 7% 5%;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-mail{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1000px) {
+    body {
+        border: 1px red solid;
+    }
+
+    /* navabr */
+    ul{
+        display: none;    
+    }
+    /* Hero */
+    .hero-intro{
+        display: block;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 5.5rem;
+    }
+
+    .hero-text{
+        margin: 10rem 0 0;
+    }
+
+    .text-blw{
+        margin-bottom: 15px;
+    }
+
+    .button{
+        margin: 0;
+        align-content: center;
+        text-align: center;
+        width: auto;
+        margin: 0 10.5rem;
+        padding: 10px;
+    }
+
+    .socials{
+        /* background-color:red; */
+        display: flex;
+        justify-content: center;
+        margin: 5rem 0 0;
+    }
+
+    .icon{
+        padding: 0 35px;
+    }
+    /* About me */
+
+
+    .abt-me{
+        padding: 10px;
+       
+    }
+
+    p.about-me-txt{
+        margin-right: 40px;
+        margin-top: 150px;
+        font-size: 20px;
+    }
+
+    .profile-pic{
+        width: 150px;
+    }
+
+    .section{
+        position: relative;
+    }
+
+    h2.about-me-title{ 
+        position: absolute;
+        width: 100%;
+        left: 5px;
+        align-items: center;
+        text-align: center;
+        font-size: 3.5rem;
+    }
+
+    .img-container{
+        display: flex;
+        align-items: center;
+    }
+
+    /* Projects */
+
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project-card{
+        margin-bottom: 15px;
+    }
+
+    .project-text{
+        margin: 10px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+    
+    footer{
+        height: 200px;
+        padding-top: 60px;
+        align-content: center;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    h1{
+        font-size: 5rem;
+    }
+    
+    .button{
+        align-items: center;
+        margin: auto;
+        padding: 10px;
+        width: 30%;
+    }
+  
+    .project-card{
+        margin-bottom: 35px;
+    }
+}

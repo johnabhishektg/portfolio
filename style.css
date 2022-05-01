@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "darkline";
+    src: url(fonts/darkline.regular.ttf);
+}
 :root{
     --primary-blue: #101729;
     --primary-text: #fff;
@@ -44,19 +48,48 @@ li{
 
 a{
     text-decoration: none;
+    color: var(--primary-text);
+}
+
+a.hover{
+    text-decoration: none;
     color: inherit;
     font-size: 20px;
 }
 
-a:hover{
+a.hover:hover{
     color: var(--coral);
     transition: 0.25s;
 }
 
-.title{
+.nav-tag{
+    margin-top: 5px;
     align-items: center;
-    text-align: center;
+    padding: 20px;
 }
+
+.nav-toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
+    cursor: pointer;
+} 
+
+.title{
+    display: flex;
+    align-self: center;
+    font-family: "darkline", sans-serif;    
+    margin-left: 35px;
+    
+}
+
+.title-a{
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
 /* hero section */
 
@@ -180,6 +213,11 @@ h3{
 
 .view-here{
     font-size: 15px;
+    color: grey;
+}
+
+.view-here:hover{
+    color: var(--coral);
 }
 
 /* Contact Me */
@@ -199,12 +237,57 @@ footer{
 
 /* responsive */
 
+
+
 @media only screen and (max-width: 1000px) {
 
-    /* navabr */
-    ul{
-        display: none;    
+    .nav-toggle .bar{
+        display: block;
     }
+
+    .nav-toggle.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .nav-toggle.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-toggle.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        
+    }
+
+    /* navabr */
+    ul {
+        position: absolute;
+        top: -1000px;
+        opacity: 0; 
+        display: table-column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        line-height: 35px;    
+        margin: 70px 0 0;
+        padding: 15px 0 0;
+        z-index: 9;
+        transition: 0.5s ease;
+    }
+
+    ul.active{
+        top: 0;
+        opacity: 1;
+        transition: 0.5s ease;
+        height: 100vh;
+        background-color: var(--primary-blue);
+    }
+
+    li:hover{
+        background-color: var(--coral);
+        color: #fff;
+        transition: all 0.15s ease-in;
+    }
+
+
+
     /* Hero */
     .hero-intro{
         display: block;
